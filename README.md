@@ -1,6 +1,6 @@
 ## Prerequisite
 
-- ruby 2.2+
+- ruby 2.5+
 - bundler
 
 ```bash
