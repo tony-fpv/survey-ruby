@@ -1,5 +1,3 @@
-# Culture Amp Code Test by Fred Wu
-
 ## Prerequisite
 
 - ruby 2.2+
@@ -23,41 +21,6 @@ Example usage:
 ./bin/survey-tool -s example-data/survey-1.csv -r example-data/survey-1-responses.csv
 ```
 
-## Application Architecture
-
-        +----------------------------+
-        |             CLI            |
-        +--------------+-------------+
-                       |
-    +------------------v-----------------+
-    |              Workflow              |
-    +------------------------------------+
-    |   +----------------------------+   |
-    |   |         Transformer        |   | <- Transforms text input for consumption.
-    |   +--------------+-------------+   |
-    |                  |                 |
-    |   +--------------v-------------+   |
-    |   |          Producer          |   | <- Produces metrics.
-    |   +----------------------------+   |
-    |   |  +----------------------+  |   |
-    |   |  |        Models        |  |   | <- Domain models.
-    |   |  +----------------------+  |   |
-    |   |  |  +----------------+  |  |   |
-    |   |  |  |     Survey     |  |  |   |
-    |   |  |  +----------------+  |  |   |
-    |   |  |  +----------------+  |  |   |
-    |   |  |  | SurveyQuestion |  |  |   |
-    |   |  |  +----------------+  |  |   |
-    |   |  |  +----------------+  |  |   |
-    |   |  |  |    Response    |  |  |   |
-    |   |  |  +----------------+  |  |   |
-    |   |  +----------------------+  |   |
-    |   +--------------+-------------+   |
-    |                  |                 |
-    |   +--------------v-------------+   |
-    |   |          Presenter         |   | <- Presents metrics.
-    |   +----------------------------+   |
-    +------------------+-----------------+
 
 ## Test Suite
 
@@ -79,7 +42,3 @@ bundle exec rake rubocop
 bundle exec rake spec
 ```
 
-## Author
-
-- Fred Wu <ifredwu@gmail.com>
-- 2016-05-16
