@@ -23,9 +23,9 @@ module Surveyor
       private
 
       # turn
-      #   [5, 5, "Melbourne"]
+      #   [5, 5, "London"]
       # into:
-      #   [{ "ratingquestion" => 5 }, { "ratingquestion" => 5 }, { "singleselect" => "Melbourne" }]
+      #   [{ "ratingquestion" => 5 }, { "ratingquestion" => 5 }, { "singleselect" => "London" }]
       def answers_with_type
         survey.questions.map(&:type).zip(answers).map { |ele| { ele[0] => ele[1] } }
       end
